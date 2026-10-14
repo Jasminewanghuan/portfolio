@@ -1,0 +1,29 @@
+# Each project: title, context, year, result (short headline number), description, tags, link (optional)
+- title: Data Lineage Experience Redesign
+  context: ICBC · Data Management Office
+  year: ""
+  result: "−60% support tickets"
+  description: Rebuilt the lineage website around how analysts and data stewards actually trace data, working with design and engineering in Figma. Support tickets dropped 60%.
+  tags: [Data lineage, UX research, Figma]
+  link: ""
+- title: Data Quality Management Product
+  context: ICBC · Data Management Office
+  year: ""
+  result: "+20% data quality KPIs"
+  description: Launched a data quality product spanning four product teams — rules, monitoring, and KPIs for critical data elements — lifting data quality KPIs by 20%.
+  tags: [Data quality, CDEs, QA]
+  link: ""
+- title: Generative-AI Mobile Automation App
+  context: UTA · Founding PM
+  year: "2024"
+  result: "30 state libraries"
+  description: Led a six-person team from concept to MVP for an app that automates tasks on mobile apps; adopted by 30 Australian state libraries.
+  tags: [Gen AI, 0→1, Team lead]
+  link: ""
+- title: Instant Quote Engine
+  context: BDIPlus · Insurance SaaS
+  year: "2021"
+  result: "Weeks → minutes"
+  description: Specified and shipped a quote function that took policy approval from weeks to minutes.
+  tags: [Fintech, B2B SaaS, APIs]
+  link: ""

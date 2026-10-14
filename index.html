@@ -1,0 +1,85 @@
+---
+layout: default
+---
+{% assign p = site.data.profile %}
+<section class="band band-hero" id="about">
+  <div class="wrap hero">
+    <div class="hero-text">
+      <p class="eyebrow">About · {{ p.location }}</p>
+      <h1>{{ p.name }}</h1>
+      <p class="headline">{{ p.headline }}</p>
+      <div class="intro">{{ p.intro | markdownify }}</div>
+      <div class="actions">
+        {% if p.resume_pdf != "" %}<a class="btn btn-primary" href="{{ p.resume_pdf | relative_url }}" download>Download résumé</a>{% endif %}
+        {% if p.email != "" %}<a class="btn" href="mailto:{{ p.email }}">{{ p.email }}</a>{% endif %}
+        {% if p.linkedin != "" %}<a class="btn" href="{{ p.linkedin }}">LinkedIn</a>{% endif %}
+        <a class="btn" href="{{ '/blog/' | relative_url }}">Read my writing</a>
+      </div>
+    </div>
+    <aside class="hero-side">
+      {% if p.photo != "" %}<figure class="portrait"><img src="{{ p.photo | relative_url }}" alt="Portrait of {{ p.name }}"></figure>{% endif %}
+      <div class="focus-box">
+        <p class="label">Focus areas</p>
+        <ul class="focus">
+          {% for f in p.focus %}<li>{{ f }}</li>{% endfor %}
+        </ul>
+      </div>
+    </aside>
+  </div>
+</section>
+
+
+
+<section class="band band-ink" id="writing">
+  <div class="wrap section">
+    <header class="section-head section-head-row">
+      <div>
+        <p class="eyebrow">Writing</p>
+        <h2>Latest articles</h2>
+        <p class="section-sub">Notes on data products and governance. Each post downloads as a PDF.</p>
+      </div>
+      <a class="btn btn-light" href="{{ '/blog/' | relative_url }}">All posts</a>
+    </header>
+    {% include post-list.html count=3 %}
+  </div>
+</section>
+
+<section class="band band-tint" id="projects">
+  <div class="wrap section">
+    <header class="section-head">
+      <p class="eyebrow">Projects</p>
+      <h2>Selected work</h2>
+      <p class="section-sub">Products I've taken from problem to launch.</p>
+    </header>
+    <div class="blocks">
+      {% for proj in site.data.projects %}
+      <article class="block">
+        <p class="label">{{ proj.context }}{% if proj.year != "" %} · {{ proj.year }}{% endif %}</p>
+        {% if proj.result != "" %}<p class="block-result">{{ proj.result }}</p>{% endif %}
+        <h3>{% if proj.link != "" %}<a href="{{ proj.link }}">{{ proj.title }}</a>{% else %}{{ proj.title }}{% endif %}</h3>
+        <p class="block-desc">{{ proj.description }}</p>
+        <ul class="tags">{% for t in proj.tags %}<li>{{ t }}</li>{% endfor %}</ul>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="band band-surface" id="education">
+  <div class="wrap section">
+    <header class="section-head">
+      <p class="eyebrow">Education</p>
+      <h2>Academic background</h2>
+    </header>
+    <ul class="edu">
+      {% for e in site.data.education %}
+      <li>
+        <p class="edu-year">{{ e.year }}</p>
+        <h3>{{ e.school }}</h3>
+        <p>{{ e.degree }}</p>
+        {% if e.details != "" %}<p class="edu-detail">{{ e.details }}</p>{% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>

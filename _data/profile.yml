@@ -1,0 +1,18 @@
+name: Jasmine Wang
+headline: Product Manager · Data Platforms & Governance
+location: New York, NY
+intro: |
+  I build data products that help financial institutions move faster and trust their data. At ICBC New York, I lead product development for the Data Management Office, where I build the tools that let people across the bank find, understand, and rely on their data. The result is less time spent chasing numbers and more confidence in the decisions and regulatory reports built on them.
+
+  Before that, I took a B2B insurance platform through its Series A at BDIPlus, and earlier interned on TikTok’s e-commerce data team in Beijing. I hold an MS from Columbia University and work fluently in English and Mandarin.
+focus:
+  - Data Quality & Governance
+  - Data Product Management
+  - Data Risk & Regulation
+  - Analytics & Experimentation
+email: ""            # e.g. hello@yourdomain.com — leave blank to hide
+linkedin: ""         # full URL, e.g. https://www.linkedin.com/in/your-handle
+github: ""
+medium: ""           # your Medium profile URL
+resume_pdf: ""       # upload a PDF in the editor, e.g. /assets/uploads/resume.pdf
+photo: /assets/uploads/avatar.png   # optional headshot; shown with a blue tint
