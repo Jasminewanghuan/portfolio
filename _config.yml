@@ -2,7 +2,7 @@
 title: Jasmine Wang
 description: Product manager for data platforms and data governance in financial services, based in New York.
 url: ""          # set to your domain once connected, e.g. https://jasminewang.com
-baseurl: ""
+baseurl: "/portfolio"
 lang: en
 
 markdown: kramdown
