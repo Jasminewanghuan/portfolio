@@ -31,9 +31,9 @@
     <div class="wrap footer-inner">
       <span>© {{ site.time | date: '%Y' }} {{ site.data.profile.name }}</span>
       <span class="footer-links">
-        {% if site.data.profile.linkedin != "" %}<a href="{{ site.data.profile.linkedin }}">LinkedIn</a>{% endif %}
-        {% if site.data.profile.medium != "" %}<a href="{{ site.data.profile.medium }}">Medium</a>{% endif %}
-        {% if site.data.profile.github != "" %}<a href="{{ site.data.profile.github }}">GitHub</a>{% endif %}
+        {% if site.data.profile.linkedin and site.data.profile.linkedin != "" %}<a href="{{ site.data.profile.linkedin }}">LinkedIn</a>{% endif %}
+        {% if site.data.profile.medium and site.data.profile.medium != "" %}<a href="{{ site.data.profile.medium }}">Medium</a>{% endif %}
+        {% if site.data.profile.github and site.data.profile.github != "" %}<a href="{{ site.data.profile.github }}">GitHub</a>{% endif %}
       </span>
     </div>
   </footer>

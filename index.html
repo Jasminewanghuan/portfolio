@@ -10,13 +10,13 @@ layout: default
       <p class="headline">{{ p.headline }}</p>
       <div class="intro">{{ p.intro | markdownify }}</div>
       <div class="actions">
-        {% if p.email != "" %}<a class="btn" href="mailto:{{ p.email }}">{{ p.email }}</a>{% endif %}
-        {% if p.linkedin != "" %}<a class="btn" href="{{ p.linkedin }}">LinkedIn</a>{% endif %}
+        {% if p.email and p.email != "" %}<a class="btn" href="mailto:{{ p.email }}">{{ p.email }}</a>{% endif %}
+        {% if p.linkedin and p.linkedin != "" %}<a class="btn" href="{{ p.linkedin }}">LinkedIn</a>{% endif %}
         <a class="btn" href="{{ '/blog/' | relative_url }}">Read my writing</a>
       </div>
     </div>
     <aside class="hero-side">
-      {% if p.photo != "" %}<figure class="portrait"><img src="{{ p.photo | relative_url }}" alt="Portrait of {{ p.name }}"></figure>{% endif %}
+      {% if p.photo and p.photo != "" %}<figure class="portrait"><img src="{{ p.photo | relative_url }}" alt="Portrait of {{ p.name }}"></figure>{% endif %}
       <div class="focus-box">
         <p class="label">Focus areas</p>
         <ul class="focus">

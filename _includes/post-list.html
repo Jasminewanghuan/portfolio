@@ -9,6 +9,6 @@
     </div>
   </li>
   {% else %}
-  <li class="empty">No posts yet.</li>
+  <li class="empty">New articles are on the way.{% if site.data.profile.medium and site.data.profile.medium != "" %} In the meantime, <a href="{{ site.data.profile.medium }}">read my writing on Medium</a>.{% endif %}</li>
   {% endfor %}
 </ul>

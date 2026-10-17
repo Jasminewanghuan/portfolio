@@ -1,4 +1,5 @@
 ---
+published: false   # hidden from the site; delete this line when the real article is in
 title: "Placeholder: paste your Medium article title here"
 date: 2026-10-01
 summary: One or two sentences on what the article covers. This shows on the home page and the blog list.
