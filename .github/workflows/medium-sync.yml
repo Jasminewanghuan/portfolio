@@ -1,0 +1,37 @@
+name: Sync Medium articles
+
+on:
+  schedule:
+    - cron: "0 13 * * 5"   # every Friday, 9am New York time (8am in winter)
+  workflow_dispatch:        # "Run workflow" button on the Actions tab
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/medium-sync.yml"
+      - "scripts/medium_sync.py"
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Import new articles from Medium
+        env:
+          MEDIUM_FEED: https://medium.com/feed/@hw2769
+        run: python3 scripts/medium_sync.py
+
+      - name: Save new posts
+        run: |
+          git config user.name "medium-sync"
+          git config user.email "medium-sync@users.noreply.github.com"
+          git add _posts
+          if git diff --cached --quiet; then
+            echo "No new articles."
+          else
+            git commit -m "Import new Medium article(s)"
+            git push
+          fi

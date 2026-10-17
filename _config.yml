@@ -12,3 +12,4 @@ timezone: America/New_York
 exclude:
   - README.md
   - preview
+  - scripts
