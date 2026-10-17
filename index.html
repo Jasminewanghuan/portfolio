@@ -53,9 +53,9 @@ layout: default
     <div class="blocks">
       {% for proj in site.data.projects %}
       <article class="block">
-        <p class="label">{{ proj.context }}{% if proj.year != "" %} · {{ proj.year }}{% endif %}</p>
-        {% if proj.result != "" %}<p class="block-result">{{ proj.result }}</p>{% endif %}
-        <h3>{% if proj.link != "" %}<a href="{{ proj.link }}">{{ proj.title }}</a>{% else %}{{ proj.title }}{% endif %}</h3>
+        <p class="label">{{ proj.context }}{% if proj.year and proj.year != "" %} · {{ proj.year }}{% endif %}</p>
+        {% if proj.result and proj.result != "" %}<p class="block-result">{{ proj.result }}</p>{% endif %}
+        <h3>{% if proj.link and proj.link != "" %}<a href="{{ proj.link }}">{{ proj.title }}</a>{% else %}{{ proj.title }}{% endif %}</h3>
         <p class="block-desc">{{ proj.description }}</p>
         <ul class="tags">{% for t in proj.tags %}<li>{{ t }}</li>{% endfor %}</ul>
       </article>
@@ -76,7 +76,7 @@ layout: default
         <p class="edu-year">{{ e.year }}</p>
         <h3>{{ e.school }}</h3>
         <p>{{ e.degree }}</p>
-        {% if e.details != "" %}<p class="edu-detail">{{ e.details }}</p>{% endif %}
+        {% if e.details and e.details != "" %}<p class="edu-detail">{{ e.details }}</p>{% endif %}
       </li>
       {% endfor %}
     </ul>
