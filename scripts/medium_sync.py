@@ -60,7 +60,8 @@ def tidy_body(body, title):
     body = re.sub(r'<img[^>]+medium\.com/_/stat[^>]*>', "", body)
     # Drop a leading heading that repeats the title.
     m = re.match(r"\s*<h[1-4][^>]*>(.*?)</h[1-4]>", body, re.S)
-    if m and text_of(m.group(1)).lower() == title.lower():
+    norm = lambda t: re.sub(r"\W+", "", t).lower()
+    if m and norm(text_of(m.group(1))) == norm(title):
         body = body[m.end():]
     # Stop Jekyll treating {{ or {% in the article as template code.
     body = body.replace("{{", "&#123;&#123;").replace("{%", "&#123;%")
