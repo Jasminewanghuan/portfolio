@@ -41,7 +41,6 @@ content:
       - { name: linkedin, label: LinkedIn URL, type: string }
       - { name: github, label: GitHub URL, type: string }
       - { name: medium, label: Medium profile URL, type: string }
-      - { name: resume_pdf, label: Résumé PDF, type: file }
       - { name: photo, label: Headshot, type: image }
 
   - name: projects
